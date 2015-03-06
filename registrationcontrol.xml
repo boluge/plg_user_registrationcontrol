@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2015 RegControl. All rights reserved.
+ * @license  GNU General Public License version 2 or later; see LICENSE.txt
+ */
+-->
+<extension type="plugin" version="3.0" group="user" method="upgrade">
+	<name>plg_user_registrationcontrol</name>
+	<author>Stéphane Deluce</author>
+	<creationDate>March 2015</creationDate>
+	<copyright>Copyright (c) 2015 RegControl. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<version>1.0.4</version>
+	<description>PLG_USER_REGISTRATION_CONTROL_DESC</description>
+
+	<files>
+		<filename plugin="registrationcontrol">registrationcontrol.php</filename>
+		<filename>index.html</filename>
+
+		<filename>en-GB.plg_user_registrationcontrol.ini</filename>
+		<filename>en-GB.plg_user_registrationcontrol.sys.ini</filename>
+		<filename>fr-FR.plg_user_registrationcontrol.ini</filename>
+		<filename>fr-FR.plg_user_registrationcontrol.sys.ini</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.plg_user_registrationcontrol.ini</language>
+		<language tag="en-GB">en-GB.plg_user_registrationcontrol.sys.ini</language>
+
+		<language tag="fr-FR">fr-FR.plg_user_registrationcontrol.ini</language>
+		<language tag="fr-FR">fr-FR.plg_user_registrationcontrol.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field name="type" type="radio" default="1" label="PLG_USER_REGISTRATION_CONTROL_TYPE" description="PLG_USER_REGISTRATION_CONTROL_TYPE_DESC">
+					<option value="0">PLG_USER_REGISTRATION_CONTROL_TYPE_REFUSE</option>
+					<option value="1">PLG_USER_REGISTRATION_CONTROL_TYPE_AUTHORIZE</option>
+				</field>
+
+				<field name="domains" type="textarea" default="" label="PLG_USER_REGISTRATION_CONTROL_URL" description="PLG_USER_REGISTRATION_CONTROL_URL_DESC" rows="5" cols="20" />
+
+				<field name="error" type="textarea" default="" label="PLG_USER_REGISTRATION_CONTROL_ERROR" description="PLG_USER_REGISTRATION_CONTROL_ERROR_DESC" rows="5" cols="20" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
