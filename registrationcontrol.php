@@ -56,7 +56,7 @@ class plguserRegistrationControl extends JPlugin {
 		if( $type == 1 ){
 			if(empty($matches)){ $result = false; } else { $result = true; }
 			if ($result != true) {
-				JFactory::getApplication()->enqueueMessage(JText::_($error), 'error');
+				JError::raiseWarning( 4711, $error);
 				return $result;
 			} else {
 				return $result;
@@ -66,7 +66,7 @@ class plguserRegistrationControl extends JPlugin {
 			if ($result == true) {
 				return $result;
 			} else {
-				JFactory::getApplication()->enqueueMessage(JText::_($error), 'error');
+				JError::raiseWarning( 4711, $error);
 				return $result;
 			}
 		}
